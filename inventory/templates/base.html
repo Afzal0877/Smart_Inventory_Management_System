@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Inventory Management System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                AI Inventory Management
+            </a>
+
+            <div class="navbar-nav ms-auto">
+
+                <a class="nav-link text-white" href="#">Dashboard</a>
+                <a class="nav-link text-white" href="{% url 'product_list' %}">Products</a>
+                <a class="nav-link text-white" href="{% url 'category_list' %}">
+    Categories
+</a>
+                <a class="nav-link text-white" href="{% url 'supplier_list' %}">
+    Suppliers
+</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="container mt-4">
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+
+</body>
+
+</html>
